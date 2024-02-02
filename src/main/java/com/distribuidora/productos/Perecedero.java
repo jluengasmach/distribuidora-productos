@@ -1,5 +1,6 @@
-package main.java.com.distribuidora.productos;
+package com.distribuidora.productos;
 
+import com.distribuidora.productos.*;
 public class Perecedero extends Producto{
     private int diasPorCaducar;
 
@@ -23,14 +24,15 @@ public class Perecedero extends Producto{
 
     @Override
     public void calcular(int cantidad) {
+        super.calcular(cantidad);
         switch (this.diasPorCaducar) {
-            this.precioTotal = super.calcular(cantidad);
             case 1:
                 this.precioTotal /= 4;
                 break;
             case 2:
                 this.precioTotal /= 3;
-            default:
+                break;
+            case 3:
                 this.precioTotal /= 2;
                 break;
         }

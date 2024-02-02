@@ -1,4 +1,4 @@
-package main.java.com.distribuidora.productos;
+package com.distribuidora.productos;
 
 public class NoPerecedero extends Producto {
     private String tipo;
